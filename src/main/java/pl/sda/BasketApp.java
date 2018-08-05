@@ -22,14 +22,13 @@ public class BasketApp {
     private BasketService basketService;
     private DiscountFactory discountFactory;
 
+
+    @Autowired
     public BasketApp(BasketService basketService, DiscountFactory discountFactory) {
         this.basketService = basketService;
         this.discountFactory = discountFactory;
         scanner = new Scanner(System.in);
     }
-
-    @Autowired
-
 
     public void start() {
         user = chooseUser();
